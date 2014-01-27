@@ -7,4 +7,3 @@ prisoners.native: prisoners.ml
 
 prisoners: prisoners.cpp
 	g++ -O2 -o $@ $^
-
