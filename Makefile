@@ -1,6 +1,6 @@
-.PHONY: all minscalar prisoners twoatstore
+.PHONY: all minscalar prisoners twoatstore ropeintranet
 
-all: minscalar prisoners twoatstore
+all: minscalar prisoners twoatstore ropeintranet
 
 minscalar:
 	$(MAKE) -C $@
@@ -11,3 +11,5 @@ prisoners:
 twoatstore:
 	$(MAKE) -C $@
 
+ropeintranet:
+	$(MAKE) -C $@
