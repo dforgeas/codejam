@@ -9,14 +9,14 @@ let solve (n, m) ls_drive ls_todo =
 	let rec mkdirs folder name =
 		(* get next path part *)
 		let part = try
-			let idx = String.index name '/' in
-			String.sub name 0 idx
+			let idx = String.index name '/'
+			in String.sub name 0 idx
 			with Not_found -> name
 		in try
 			Hashtbl.find folder part
 			with Not_found ->
-				let newFolder = Hashtbl.create 7 in
-				Hashtbl.add folder part newFolder;
+				let newFolder = Hashtbl.create 7
+				in Hashtbl.add folder part newFolder;
 				newFolder
 
 let () =
