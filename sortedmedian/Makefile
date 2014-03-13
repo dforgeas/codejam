@@ -1,6 +1,6 @@
 .PHONY: all
 
-PROJECT=sortedmean
+PROJECT=sortedmedian
 
 all: $(PROJECT).native
 
