@@ -1,7 +1,7 @@
 let scan_int () = Scanf.scanf " %d" (fun x -> x)
 let scan_float () = Scanf.scanf " %f" (fun x -> x)
 let scan_array n =
-	let result = Array.make n 0 in
+	let result = Array.make n 0. in
 	for i = 0 to n - 1 do
 		result.(i) <- scan_float ()
 	done;
@@ -11,7 +11,7 @@ let naive_median a =
 	if Array.length a = 0 then nan else
 	let mid = Array.length a / 2 in
 	if 1 land Array.length a = 0 then (* length is even *)
-		(a.(mid) +. a.(mid - 1)) /. 2
+		(a.(mid) +. a.(mid - 1)) /. 2.
 	else (* length is odd *)
 		a.(mid)
 
