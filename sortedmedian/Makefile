@@ -4,5 +4,5 @@ PROJECT=sortedmedian
 
 all: $(PROJECT).native
 
-$(PROJECT).native: $(PROJET).ml
-  ocamlbuild $@
+$(PROJECT).native: $(PROJECT).ml
+	ocamlbuild $@

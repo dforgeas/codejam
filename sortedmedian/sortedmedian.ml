@@ -3,12 +3,12 @@ let scan_float () = Scanf.scanf " %f" (fun x -> x)
 let scan_array () =
 	let len = scan_int () in
 	let result = Array.make len 0. in
-	for i = 0 to n - 1 do
+	for i = 0 to len - 1 do
 		result.(i) <- scan_float ()
 	done;
 	result
 
-let naive_median a =
+let median a =
 	let len = Array.length a in
 	if len = 0 then nan else
 	let mid = len / 2 in
@@ -17,10 +17,10 @@ let naive_median a =
 	else (* length is odd *)
 		a.(mid)
 
-let naive_mean a b =
+let naive_median a b =
 	let c = Array.append a b in
 	Array.fast_sort compare c;
-	naive_median c
+	median c
 
 let () =
 	let t = scan_int () in
@@ -29,5 +29,5 @@ let () =
 		let b = scan_array () in
 		Array.fast_sort compare a;
 		Array.fast_sort compare b;
-		
+		Printf.printf "median: %f\n" (naive_median a b)
 	done
